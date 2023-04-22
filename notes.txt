@@ -17,3 +17,16 @@
                 this part of code is visible on the web page
             </body>
         </html>
+
+        STRUCTURE OF THE BODY 
+        👇👇
+        <body>
+            header
+              image(logo)
+              heading of the website
+
+            main
+              aside(for the links)  
+              section(for the contents)
+        </body>
+

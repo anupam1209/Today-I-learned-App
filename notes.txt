@@ -50,4 +50,6 @@
         1. link for the google fonts
         2. link to you CSS file
 
-        
+        IMPORTANT CONCEPTS IN CSS
+        1. CSS Inheritance
+        2. CSS Box Model

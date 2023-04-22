@@ -45,3 +45,9 @@
             text-align: center;
             font-size: 20px;
         }
+
+        IMP NOTE: first include the google fonts and then only include your CSS file
+        1. link for the google fonts
+        2. link to you CSS file
+
+        

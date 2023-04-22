@@ -30,3 +30,18 @@
               section(for the contents)
         </body>
 
+
+        CSS
+        cascading style sheets
+
+        HTML - describe the content
+        CSS - visula style and presentation
+        CSS consists of countless properties that developers use --> no need to know all the properties
+
+
+        👇selector
+        h1{
+            color: blue;👈properties and value
+            text-align: center;
+            font-size: 20px;
+        }

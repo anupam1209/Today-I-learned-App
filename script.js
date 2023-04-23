@@ -1,5 +1,8 @@
 const btn = document.querySelector(".btn-open");
 const form = document.querySelector(".fact-form");
+const factsList = document.querySelector(".facts-list");
+
+factsList.innerHTML = "";
 
 btn.addEventListener("click", function () {
   console.log("CLICKED!!");
@@ -11,3 +14,5 @@ btn.addEventListener("click", function () {
     btn.textContent = "share a fact";
   }
 });
+
+

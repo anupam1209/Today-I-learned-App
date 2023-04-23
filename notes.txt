@@ -53,3 +53,9 @@
         IMPORTANT CONCEPTS IN CSS
         1. CSS Inheritance
         2. CSS Box Model
+
+        2 types of elements in HTML
+        Block level - which requires the 100% of the width e.g. background-color, h1.
+        Inline level - only occupies the space it requires e.g. span, strong, form input element.
+
+        note:- text-align property won't work for inline element (since inline elements take only space it reuires, correct??)

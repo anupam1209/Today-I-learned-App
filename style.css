@@ -1,94 +1,107 @@
 /* global reset */
-*{
-    margin: 0;
-    padding: 0;
-    /* this property we add because in order box model to work */
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  /* this property we add because in order box model to work */
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #292524;
-    color: #fafaf9;
-    font-family: "Sono";
-    padding: 48px 64px;
+body {
+  background-color: #292524;
+  color: #fafaf9;
+  font-family: "Sono";
+  padding: 48px 64px;
 }
 
 /* MAIN LAYOUT */
-.container{
-    max-width: 1500px;
-    margin: 0 auto;
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
-.header{
-    margin-bottom: 40px;
-    padding: 20px;
+.header {
+  margin-bottom: 40px;
+  padding: 20px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 16px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.logo img{
-    width: 68;
-    height: 68px;
+.logo img {
+  width: 68;
+  height: 68px;
 }
 
-.fact-form{
-    background-color: #44403c;
-    margin-bottom: 40px;
-    padding: 16px 40px;
-    text-align: center;
+.fact-form {
+  background-color: #44403c;
+  margin-bottom: 40px;
+  padding: 16px 40px;
+  text-align: center;
 }
 
-.main{
-    display: grid;
-    /* first value you will mention how much you want to give and second value will occupy the rest of it with 1fr */
-    grid-template-columns: 250px 1fr;
-    gap: 48px;
+.main {
+  display: grid;
+  /* first value you will mention how much you want to give and second value will occupy the rest of it with 1fr */
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
 }
 
-h1{
-    font-size: 42px;
-    text-transform: uppercase;
-    /* text-align: center; */
-    font-family: 'Coiny', cursive;
-    line-height: 1;
-    margin-top: 12px;
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  /* text-align: center; */
+  font-family: "Coiny", cursive;
+  line-height: 1;
+  margin-top: 12px;
 }
 
-.fact{
-    font-size: 18px;
-    line-height: 1.4;
-    font-family: "Sono";
-    background-color: #44403c;
-    margin-bottom: 16px;
-    padding: 16px 24px;
-    letter-spacing: -1px;
+.fact {
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: "Sono";
+  background-color: #44403c;
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  letter-spacing: -1px;
 
-    display: flex;
-    align-items: center;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
-.tag{
-    text-transform: uppercase;
-    font-size: 14px;
-    font-family: "Coiny";
-    padding-top: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Coiny";
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.vote-buttons{
-    margin-left: auto;
+.vote-buttons {
+  margin-left: auto;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
+}
+
+.source:link,
+.source:visited {
+  color: #a8a29e;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.source:active,
+.source:hover {
+  color: #3b82f6;
 }

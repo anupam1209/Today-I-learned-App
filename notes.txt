@@ -59,3 +59,5 @@
         Inline level - only occupies the space it requires e.g. span, strong, form input element.
 
         note:- text-align property won't work for inline element (since inline elements take only space it reuires, correct??)
+
+        CSS grid:- for creating bigger layouts and 2D layouts

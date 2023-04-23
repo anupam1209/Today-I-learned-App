@@ -35,6 +35,13 @@ body{
     text-align: center;
 }
 
+.main{
+    display: grid;
+    /* first value you will mention how much you want to give and second value will occupy the rest of it with 1fr */
+    grid-template-columns: 250px 1fr;
+    gap: 48px;
+}
+
 h1{
     font-size: 42px;
     text-transform: uppercase;

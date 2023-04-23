@@ -15,19 +15,33 @@ body{
 
 .header{
     margin-bottom: 40px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .fact-form{
     background-color: #44403c;
     margin-bottom: 40px;
     padding: 16px 40px;
+    text-align: center;
 }
 
 h1{
     font-size: 42px;
     text-transform: uppercase;
-    text-align: center;
+    /* text-align: center; */
     font-family: 'Coiny', cursive;
+    line-height: 1;
+    margin-top: 12px;
 }
 
 .fact{
@@ -43,6 +57,9 @@ h1{
     text-transform: uppercase;
     font-size: 14px;
     font-family: "Coiny";
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 ul{

@@ -51,7 +51,25 @@ const factsList = document.querySelector(".facts-list");
 //CREATING DOM ELEMENTS: RENDER FACTS IN LIST
 factsList.innerHTML = "";
 
-createFactsList(initialFacts);
+//LOAD DATA FROM SUPABASE
+loadFacts();
+
+async function loadFacts() {
+  const res = await fetch("https://sljaqermtzygbxhqliyj.supabase.co/rest/v1/facts", {
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNsamFxZXJtdHp5Z2J4aHFsaXlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNDU5NzMsImV4cCI6MTk5NzgyMTk3M30.N_HtWQ7nKo-KHkoWDqUL-lCY5f-NXXoRt1M996INn7E",
+      authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNsamFxZXJtdHp5Z2J4aHFsaXlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNDU5NzMsImV4cCI6MTk5NzgyMTk3M30.N_HtWQ7nKo-KHkoWDqUL-lCY5f-NXXoRt1M996INn7E",
+    },
+  });
+  const data = await res.json();
+  console.log(data);
+
+  createFactsList(data);
+}
+
+// createFactsList(initialFacts);
 
 function createFactsList(dataArray) {
   const htmlArr = dataArray.map(
@@ -83,3 +101,4 @@ btn.addEventListener("click", function () {
     btn.textContent = "share a fact";
   }
 });
+

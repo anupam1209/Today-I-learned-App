@@ -55,16 +55,21 @@ factsList.innerHTML = "";
 loadFacts();
 
 async function loadFacts() {
-  const res = await fetch("https://sljaqermtzygbxhqliyj.supabase.co/rest/v1/facts", {
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNsamFxZXJtdHp5Z2J4aHFsaXlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNDU5NzMsImV4cCI6MTk5NzgyMTk3M30.N_HtWQ7nKo-KHkoWDqUL-lCY5f-NXXoRt1M996INn7E",
-      authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNsamFxZXJtdHp5Z2J4aHFsaXlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNDU5NzMsImV4cCI6MTk5NzgyMTk3M30.N_HtWQ7nKo-KHkoWDqUL-lCY5f-NXXoRt1M996INn7E",
-    },
-  });
+  const res = await fetch(
+    "https://sljaqermtzygbxhqliyj.supabase.co/rest/v1/facts",
+    {
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNsamFxZXJtdHp5Z2J4aHFsaXlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNDU5NzMsImV4cCI6MTk5NzgyMTk3M30.N_HtWQ7nKo-KHkoWDqUL-lCY5f-NXXoRt1M996INn7E",
+        authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNsamFxZXJtdHp5Z2J4aHFsaXlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNDU5NzMsImV4cCI6MTk5NzgyMTk3M30.N_HtWQ7nKo-KHkoWDqUL-lCY5f-NXXoRt1M996INn7E",
+      },
+    }
+  );
   const data = await res.json();
   console.log(data);
+  // const filteredData = data.filter((fact) => fact.category === "technology");
+  // console.log(filteredData);
 
   createFactsList(data);
 }
@@ -82,12 +87,14 @@ function createFactsList(dataArray) {
            >(Source)</a
           >
         </p>
-        <span class="tag" style="background-color: #3b82f6">${fact.category}</span>
+        <span class="tag" style="background-color: ${
+          CATEGORIES.find((cat) => cat.name === fact.category).color
+        }">${fact.category}</span>
     </li>`
   );
-  console.log(htmlArr);
+  // console.log(htmlArr);
   const html = htmlArr.join("");
-  console.log(html);
+  // console.log(html);
   factsList.insertAdjacentHTML("afterbegin", html);
 }
 
@@ -101,4 +108,3 @@ btn.addEventListener("click", function () {
     btn.textContent = "share a fact";
   }
 });
-

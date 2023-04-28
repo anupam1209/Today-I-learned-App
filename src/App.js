@@ -63,6 +63,9 @@ function Counter() {
 }
 
 function App() {
+  // 1. define state variable
+  const [showForm, setShowForm] = useState(false);
+
   const appTitle = "Today I Learned";
 
   return (
@@ -73,12 +76,19 @@ function App() {
           <img src="logo.png" alt="Today I Learned logo" />
           <h1>{appTitle}</h1>
         </div>
-        <button className="btn btn-large btn-open">Share a fact</button>
+        <button
+          className="btn btn-large btn-open"
+          // 3. update state variable
+          onClick={() =>
+            setShowForm((currentState) => !currentState)
+          } /* this will return the opposite state of what current state is */
+        >
+          Share a fact
+        </button>
       </header>
 
-      <Counter />
-
-      <NewFactForm />
+      {/* 2. use state variable */}
+      {showForm ? <NewFactForm /> : null}
 
       <main className="main">
         <CategoryFilter />

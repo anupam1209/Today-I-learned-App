@@ -66,26 +66,9 @@ function App() {
   // 1. define state variable
   const [showForm, setShowForm] = useState(false);
 
-  const appTitle = "Today I Learned";
-
   return (
     <>
-      {/* HEADER */}
-      <header className="header">
-        <div className="logo">
-          <img src="logo.png" alt="Today I Learned logo" />
-          <h1>{appTitle}</h1>
-        </div>
-        <button
-          className="btn btn-large btn-open"
-          // 3. update state variable
-          onClick={() =>
-            setShowForm((currentState) => !currentState)
-          } /* this will return the opposite state of what current state is */
-        >
-          Share a fact
-        </button>
-      </header>
+      <Header showForm={showForm} setShowForm={setShowForm} />
 
       {/* 2. use state variable */}
       {showForm ? <NewFactForm /> : null}
@@ -95,6 +78,28 @@ function App() {
         <FactList />
       </main>
     </>
+  );
+}
+
+function Header({ showForm, setShowForm }) {
+  const appTitle = "Today I Learned";
+
+  return (
+    <header className="header">
+      <div className="logo">
+        <img src="logo.png" alt="Today I Learned logo" />
+        <h1>{appTitle}</h1>
+      </div>
+      <button
+        className="btn btn-large btn-open"
+        // 3. update state variable
+        onClick={() =>
+          setShowForm((currentState) => !currentState)
+        } /* this will return the opposite state of what current state is */
+      >
+        {showForm ? "Close" : "Share a fact"}
+      </button>
+    </header>
   );
 }
 
